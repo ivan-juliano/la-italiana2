@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mosaicos La Italiana</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/logo.ico" type="image/x-icon" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../La Italiana WEB/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+    <!-- Fuentes locales -->
+    <link rel="preload" href="../fonts/Kollektif.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../fonts/Kollektif-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../fonts/Kollektif-Italic.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../fonts/Kollektif-BoldItalic.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+
+<body class="body">
+  
+  <div>
+
+    <!-- ===================== HEADER ===================== -->
+
+  <header>
+    <div class="header-container">
+      <div class="logo-nav-wrapper">
+        <div class="logo-section">
+          <a href="./index.html">
+            <div class="logo-rombo-32"></div>
+          </a>
+          <div class="logo-text" style="font-family: Kollektif; font-weight: lighter;">
+            <a href="./index.html" style="color: #090909; text-decoration: none;">
+              <strong style="font-size: 20px;">La Italiana</strong>
+            </a>
+            <a href="./index.html" style="color: #090909; text-decoration: none;">
+              <small>Fábrica de mosaicos</small>
+            </a>
+          </div>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+        <label for="menu-toggle" class="menu-toggle-label">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div class="menu-content">
+          <nav class="navbar-principal">
+            <a class="boton-HEADER boton-SELECTED" aria-current="page">INICIO</a>
+            <a href="./pages/quienes-somos.html" class="boton-HEADER">ACERCA DE NOSOTROS</a>
+            <div class="dropdown">
+              <a href="./pages/productos.html" class="boton-HEADER dropdown-toggle">PRODUCTOS</a>
+              <ul class="submenu">
+                <li><a href="#">GRANÍTICOS PARA INTERIOR</a></li>
+                <li><a href="#">GRANÍTICOS PARA EXTERIOR</a></li>
+                <li><a href="#">VEREDA GRANÍTICA</a></li>
+                <li><a href="#">VEREDA CALCÁREA</a></li>
+                <li><a href="#">LOSETAS</a></li>
+                <li><a href="#">REVESTIMIENTOS</a></li>
+              </ul>
+            </div>
+            <a href="./pages/contacto.html" class="boton-HEADER">CONTACTO</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Caja de búsqueda a la derecha -->
+      <div class="search-box">
+        <input type="text" placeholder="Buscar">
+      </div>
+    </div>
+  </header>
+
+    <!-- ===================== CARRUSEL ===================== -->
+    <div id="miCarrusel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carrusel-slide align-items-center justify-content-center text-center" style="background-image: url('./img/fotito 1.jpeg');">
+            <div>
+              <p class="carrusel1-lineas">DIVERSIDAD EN DISEÑOS Y COLORES</p>
+              <a href="./pages/productos.html" class="boton-productos">VER PRODUCTOS</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carrusel-slide align-items-center justify-content-center text-center" style="background-image: url('./img/fotito 2.jpeg');">
+            <div>
+              <p class="carrusel2-lineas">DISEÑOS SUSTENTABLES</p>
+              <a href="./pages/productos.html" class="boton-productos">VER PRODUCTOS</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carrusel-slide align-items-center justify-content-center text-center" style="background-image: url('./img/fotito 3.jpeg');">
+            <div>
+              <p class="carrusel3-lineas">FABRICAMOS MESADAS A MEDIDA</p>
+              <a href="./pages/contacto.html" class="boton-productos">CONSÚLTANOS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- ===================== SECCIÓN PRODUCTOS ===================== -->
+    <section id="Productos" class="text-center">
+      <div class="horizontal-scroll">
+        <table>
+          <tbody>
+            <tr>
+              <td><img src="./img/mosaicos-300x267.jpg" alt="GRANÍTICOS PARA INTERIOR" class="imagen-zoom"></td>
+              <td><img src="./img/vereda-300x267.jpg" alt="GRANÍTICOS PARA EXTERIOR" class="imagen-zoom"></td>
+              <td><img src="./img/losetas-300x267.jpg" alt="VEREDA GRANÍTICA" class="imagen-zoom"></td>
+              <td><img src="./img/Veredas_C_30x30_Barrilete4032-1-300x300.jpg" alt="VEREDA CALCÁREA" class="imagen-zoom"></td>
+            </tr>
+            <tr>
+              <td>
+                <p style="font-weight: bold; font-size: 11px;">GRANÍTICOS PARA INTERIOR</p>
+                <a href="./pages/productos.html" class="boton-productos-light">Ver productos</a>
+              </td>
+              <td>
+                <p style="font-weight: bold; font-size: 11px;">GRANÍTICOS PARA EXTERIOR</p>
+                <a href="./pages/productos.html" class="boton-productos-light">Ver productos</a>
+              </td>
+              <td>
+                <p style="font-weight: bold; font-size: 11px;">VEREDA GRANÍTICA</p>
+                <a href="./pages/productos.html" class="boton-productos-light">Ver productos</a>
+              </td>
+              <td>
+                <p style="font-weight: bold; font-size: 11px;">VEREDA CALCÁREA</p>
+                <a href="./pages/productos.html" class="boton-productos-light">Ver productos</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN NÚMEROS ===================== -->
+    <section id="Números" class="text-center">
+      <p class="titulo-nros-lineas">La Italiana en números</p>
+        <div class="horizontal-scroll">
+          <p>Emprendemos proyectos continuamente: nos avalan más de 50 años de trayectoria en el mercado.</p>
+          <p>Nos encanta renovarnos para ofrecerle a nuestros clientes diseños novedosos y una amplia carta de colores para elegir.</p>
+          <table>
+            <tr>
+              <td>+ de</td>
+              <td>+ de</td>
+              <td>+ de</td>
+              <td>+ de</td>
+            </tr>
+            <tr>
+              <td><h1>900</h1><p>PROYECTOS</p></td>
+              <td><h1>60</h1><p>AÑOS DE TRAYECTORIA</p></td>
+              <td><h1>500</h1><p>CLIENTES</p></td>
+              <td><h1>80</h1><p>VARIEDADES</p></td>
+            </tr>
+          </table>
+        </div>
+    </section>
+
+    <!-- ===================== SECCIÓN CLIENTES ===================== -->
+    <section id="Clientes-importantes" class="text-center">
+      <p class="titulo-clients-lineas-b">Confían en nosotros</p>
+      <div class="horizontal-scroll">
+        <table>
+          <tr>
+            <td><img src="./img/villa-maria-1.png" alt="Villa María" class="imagen-zoom"></td>
+            <td><img src="./img/oulton-1.png" alt="Oulton" class="imagen-zoom"></td>
+            <td><img src="./img/sheraton-1.png" alt="Sheraton" class="imagen-zoom"></td>
+            <td><img src="./img/utn-1.png" alt="UTN" class="imagen-zoom"></td>
+          </tr>
+        </table>
+      </div>
+
+      <p class="titulo-clients-lineas-b">Dónde estamos</p>
+      <div class="map-container horizontal-scroll">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212.76211563955815!2d-64.13548233708755!3d-31.43632983392535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432bd257cf36f47%3A0x200a2c6fef4e6524!2sFabrica%20de%20Mosaicos%20La%20Italiana!5e0!3m2!1ses!2sar!4v1743968487807!5m2!1ses!2sar"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- ===================== WHATSAPP FIJO ===================== -->
+    <div class="fixed-whatsapp text-end">
+      <a href="https://api.whatsapp.com/send/?phone=5493513891752&text&type=phone_number&app_absent=0" target="_blank">
+        <img src="./img/bt-whatsapp.png" alt="">
+      </a>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+      <section id="COPYRIGHT">
+        <table>
+          <tr>
+            <td class="text-start" style="font-size: 12px;">
+              2025 © Todos los derechos reservados - Desarrollado por Iván Juliano Penna Losi
+            </td>
+            <td class="text-end">
+              <a href="https://www.linkedin.com/in/ivan-juliano/" target="_blank">
+                <img src="./img/logotipo-de-linkedin.png" alt="LinkedIn">
+              </a>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </footer>
+  </div>
+</body>
+</html>

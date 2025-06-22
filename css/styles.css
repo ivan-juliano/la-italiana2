@@ -1,0 +1,1339 @@
+/* =======================================================
+   0. Temas – Fuentes & Paleta de Colores
+====================================================== */
+
+/* 0.1 Definición de colores (variables CSS) */
+:root {
+    --color-primary: #cc3333;          /* rojo corporativo */
+    --color-secondary: #006633;        /* verde corporativo */
+    --color-alert: #E05050;            /* secciones de números */
+    --color-dark: #232323;             /* fondo copyright */
+    --color-little-dark:#323232          /* fondo lineas y algunos textos */
+    --color-gray: #8E8E8E;               /* texto oscuro gris */
+    --color-light-gray: #F5F5F5;       /* fondo secciones claras */
+    --color-black: #000000;            /* textos y botones oscuros */
+    --color-white: #ffffff;            /* fondo y textos claros */
+    --color-accent: #ffcc00;           /* hover botón light */
+    --color-danger: #FF202B;           /* hover botón productos */
+}
+
+/* 0.2 Familias tipográficas */
+
+/* Poppins – pesos y estilos */
+.poppins-thin, .poppins-thin-italic    { font-family: "Poppins", sans-serif; font-weight: 100; }
+.poppins-extralight, .poppins-extralight-italic { font-family: "Poppins", sans-serif; font-weight: 200; }
+.poppins-light, .poppins-light-italic  { font-family: "Poppins", sans-serif; font-weight: 300; }
+.poppins-regular, .poppins-regular-italic { font-family: "Poppins", sans-serif; font-weight: 400; }
+.poppins-medium, .poppins-medium-italic { font-family: "Poppins", sans-serif; font-weight: 500; }
+.poppins-semibold, .poppins-semibold-italic { font-family: "Poppins", sans-serif; font-weight: 600; }
+.poppins-bold, .poppins-bold-italic    { font-family: "Poppins", sans-serif; font-weight: 700; }
+.poppins-extrabold, .poppins-extrabold-italic { font-family: "Poppins", sans-serif; font-weight: 800; }
+.poppins-black, .poppins-black-italic  { font-family: "Poppins", sans-serif; font-weight: 900; }
+
+/* 0.3 Otras familias (en línea para ocupar menos espacio) */
+.raleway-font   { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; }  
+.Kollektif, .Kollektif-Bold, .Kollektif-Italic, .Kollektif-Bolditalic { font-weight: normal; font-style: normal; }
+.Kollektif       { font-family: 'Kollektif'; }
+.Kollektif-Bold  { font-family: 'Kollektif-Bold'; }
+.Kollektif-Italic{ font-family: 'Kollektif-Italic'; }
+.Kollektif-Bolditalic { font-family: 'Kollektif-BoldItalic'; }
+
+/*CSS REORGANIZADO TEST*/
+
+/* =======================================================
+   1. Reset / Estilos Globales
+======================================================= */
+
+/* 1.1 Box-sizing y márgenes/paddings por defecto */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 1.2 Flujo y ancho del viewport, fondo base */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+/* 1.3 Desplazamiento inicial para hacer espacio al header fijo */
+body {
+  margin-top: 110px;
+}
+
+/* 1.4 Imágenes responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =======================================================
+   2. Selectores de elementos nativos
+======================================================= */
+
+/* 2.1 Estructura: header y navegación */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 25px 230px;
+    background: hsla(0, 0%, 100%, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* 2.2 Jerarquía tipográfica */
+
+/* 2.3 Formularios */
+label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #fff;
+}
+
+input,
+select,
+textarea {
+    padding: 10px 15px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: #fff;
+    border: 1px solid #f55;
+}
+
+
+/* 2.4 Tablas */
+table {
+    width: 100%;
+    text-align: center;
+}
+
+td {
+    padding: 20px;
+}
+
+/* =======================================================
+   3. IDs (Secciones principales de la página)
+======================================================= */
+
+/* 3.1 Sección de Estadísticas / Números */
+#Números {
+    background-color: #E05050;
+    color: #fff;
+    padding: 50px 230px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+/* 3.2 Sección “Nuestra Historia” */
+#SECTION-HISTORY {
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+}
+
+/* 3.3 Sección “MMMM” (destacados) */
+#SECTION-MMMM {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* 3.4 Sección de Clientes Importantes */
+#Clientes-importantes {
+    padding: 0 230px;
+}
+
+/* 3.5 Sección de Productos */
+#Productos {
+    padding: 0 230px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 3.6 Pie de página / Copyright */
+#COPYRIGHT {
+    background-color: #232323;
+    color: #8E8E8E;
+    padding: 0 230px;
+}
+
+/* 3.7 carrusel */
+#miCarrusel .carousel-item .carrusel-slide > div {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =======================================================
+   4. Layout / Grid / Wrappers
+======================================================= */
+
+/* 4.1 Header Structure */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* 4.2 Carrusel */
+.carrusel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrusel-slide {
+    /* 1. Modelo de caja y dimensiones */
+    box-sizing: border-box;
+    width: 100%;
+    height: 350px;
+
+    /* 2. Fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* 3. Flex para centrar contenido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* 4. Posicionamiento y animación */
+    position: relative;
+    animation: fadeSlide 3s infinite;
+}
+
+/* 4.3 “MMMM” Cards Grid */
+.container-mmmm-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* 4.4 Products Section */
+.tienda-wrapper {
+    display: flex;
+    gap: 40px;
+    padding: 40px 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.productos-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 30px;
+}
+
+/* 4.5 Flexible “layout-productos” Page Layout */
+.layout-productos {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.layout-productos main {
+    flex: 1;
+}
+
+.layout-productos footer {
+    margin-top: auto;
+}
+
+/* 4.6 Contact & Map Wrappers */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* =======================================================
+   5. Navegación y Menús
+======================================================= */
+
+/* 5.1 Barra de navegación principal */
+.navbar-principal {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+/* 5.2 Botones de navegación */
+.ancho-fijo-productos {
+    width: 90.5px;
+    height: 26.5px;
+    display: inline-flex;
+    background-color: #000;
+    color: #fff;
+    pointer-events: none;
+    cursor: default;
+}
+
+.boton-HEADER,
+.ancho-fijo-productos {
+    display: inline-flex;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 450;
+    text-decoration: none;
+    padding: 5px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+}
+
+.move {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  animation: slideRight 0.5s ease-out forwards;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(7px); /* ajusta la distancia a tu gusto */
+  }
+}
+
+.boton-HEADER:hover:not(.ancho-fijo-productos):not(.boton-SELECTED) {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.boton-HEADER,
+.boton-SELECTED {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 450;
+    text-decoration: none;
+    padding: 5px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    background: none;
+    color: #000;
+}
+
+.boton-HEADER:hover {
+    color: #fff;
+}
+
+.boton-SELECTED {
+    background-color: #000;
+    color: #fff;
+    pointer-events: none;
+    cursor: default;
+    /* sin border-radius */
+}
+
+/* hover text center */
+
+
+
+/* 5.3 Dropdowns (submenús) */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #fff;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+    min-width: 220px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.submenu li a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* 5.4 Menú hamburguesa puro CSS */
+
+/* OUT OF ORDER - SE ESTÁ TESTEANDO UNA RE-EDICIÓN
+
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.menu-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.menu-toggle-label span {
+    display: block;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+
+*/
+
+/* =======================================================
+   5.6 Menú Hamburguesa
+====================================================== */
+
+/* 5.6.1 Base – Checkbox accesible pero invisible */
+.menu-toggle-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 5.6.2 Base – Label (icono hamburguesa) oculto por defecto */
+.menu-toggle-label {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  gap: 5px;
+}
+.menu-toggle-label span {
+  display: block;
+  height: 3px;
+  background-color: var(--color-black);
+  border-radius: 2px;
+}
+
+/* 5.6.3 Base – Contenedor de menú (desktop) */
+.menu-content {
+  /* en desktop será flex row; en mobile se redefine */
+  display: none;
+}
+
+/* 5.6.4 Desktop (≥769px) */
+/* Mostrar hamburguesa y ocultar nav/search desde ≤992px */
+@media (max-width: 992px) {
+  /* 1) Oculta la barra normal */
+  nav.navbar-principal,
+  .search-box {
+    display: none !important;
+  }
+
+  /* 2) Muestra el icono hamburguesa */
+  .menu-toggle-label {
+    display: flex !important;
+    order: -1;               /* opcional: forzarlo al inicio */
+    align-self: flex-end;
+    margin: 0 0 8px 0;
+  }
+
+  /* 3) Panel oculto hasta check */
+  .menu-content {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--color-white);
+    gap: 10px;
+    padding: 10px 0;
+    margin-top: 8px;
+  }
+
+  /* 4) Al chequear, mostrar panel */
+  .menu-toggle-checkbox:checked + .menu-toggle-label + .menu-content {
+    display: flex !important;
+  }
+
+  /* 5) Dentro del panel: nav vertical */
+  .menu-toggle-checkbox:checked + .menu-toggle-label + .menu-content nav.navbar-principal {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* Y para pantallas >992px, restauras la vista desktop */
+@media (min-width: 993px) {
+  .menu-toggle-label {
+    display: none !important;
+  }
+  nav.navbar-principal {
+    display: flex !important;
+  }
+  .menu-content {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+    padding: 0;
+    background: transparent;
+  }
+  .search-box {
+    display: flex !important;
+  }
+}
+
+
+/* 5.5 Hover – Efecto líquido en botones del header */
+.boton-HEADER:hover {
+  background: linear-gradient(
+    -45deg,
+    var(--color-white),
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-white)
+  );
+  background-size: 400% 400%;
+  animation: liquidoFluyendo 6s ease infinite;
+  color: var(--color-white);
+}
+
+
+/* =======================================================
+   6. Componentes / Bloques Funcionales
+======================================================= */
+
+/* 6.1 Logo */
+.logo-section {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 3px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.logo-section img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.logo-a {
+    text-decoration: none;
+    color: #090909;
+}
+.logo-rombo-32 {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom, #cc3333 50%, #006633 50%);
+    overflow: hidden;
+    margin-right: 10px;
+}
+.logo-rombo-32::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    background: #fff;
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 6.2 Buscador */
+.search-box {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 0 0.5px #000;
+    gap: 5px;
+}
+.search-box input[type="text"] {
+    padding: 10px 15px;
+    width: 180px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    transition: all 0.3s ease;
+}
+.search-box input[type="text"]::placeholder {
+    color: #000;
+    font-weight: 400;
+}
+.search-box input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #006633;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* 6.3 Zoom de imágenes */
+.imagen-zoom {
+    width: 150px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.imagen-zoom:hover {
+    transform: scale(1.2);
+}
+
+/* 6.4 Carrusel – Contenido Overlay */
+.contenido-centrado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+.icono {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* 6.5 Botones de Productos */
+.boton-productos {
+    background-color: #111;
+    font-family: 'poppins';
+    color: #fff;
+    padding: 6px 12px;
+    font-weight: 450;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.boton-productos:hover {
+  background: linear-gradient(
+    -45deg,
+    var(--color-white),
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-white)
+  );
+  background-size: 400% 400%;
+  animation: liquidoFluyendo 6s ease infinite;
+  color: var(--color-white);
+}
+.boton-productos-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    color: #8E8E8E;
+    font-weight: normal;
+    font-size: 12px;
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.boton-productos-light:hover {
+    color: #ffcc00;
+}
+
+/* 6.6 Texto con sombra */
+.texto-con-sombra {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+
+/* 6.7 Tarjetas “MMMM” */
+.mmmm-card-pruebitaaversianda {
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 260px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.img-section-mmmm {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 6.8 Sección “Quienes Somos” – Hero */
+.encabezado-principal {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+.encabezado-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.encabezado-texto {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* 6.9 Tipografía decorativa “Líneas” */
+.titulo-lineas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 250;
+    letter-spacing: 10px;
+    color: #fff;
+    margin: 40px 0;
+    gap: 30px;
+}
+.titulo-lineas::before,
+.titulo-lineas::after {
+    content: "";
+    flex: 1;
+    height: 0.5px;
+    background-color: #fff;
+}
+
+
+/* 3) Las dos líneas, absoluta y centradas verticalmente */
+/* 1) Agrupamos las tres variantes en una sola regla */
+
+.carrusel1-lineas,
+.carrusel2-lineas,
+.carrusel3-lineas {
+  position: relative;
+  display: flex;             /* <-- aquí recuperamos flex */
+  align-items: center;
+  justify-content: center;   /* centra el texto */
+  width: 100%;
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 250;
+  letter-spacing: 10px;
+  margin-top: 40px;
+  color: #fff;
+  text-align: center;        /* para navegadores más viejos */
+}
+
+/* 2) Los pseudo-elementos que dibujan las líneas */
+.carrusel1-lineas::before,
+.carrusel1-lineas::after,
+.carrusel2-lineas::before,
+.carrusel2-lineas::after,
+.carrusel3-lineas::before,
+.carrusel3-lineas::after {
+  content: "";
+  flex: 1;                   /* <-- llenan el espacio sobrante */
+  height: 0.5px;               /* grosor de la línea */
+  background-color: #fff;
+}
+
+/* 3) Un pequeño margen entre texto y línea */
+.carrusel1-lineas::before,
+.carrusel2-lineas::before,
+.carrusel3-lineas::before {
+  margin-right: 20px;
+}
+
+.carrusel1-lineas::after,
+.carrusel2-lineas::after,
+.carrusel3-lineas::after {
+  margin-left: 30px;
+}
+
+
+.subtitulo{
+  font-family: 'poppins';
+  font-size: 20px;
+  color: white;
+}
+
+.subtitulo-lineas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 250;
+    letter-spacing: 10px;
+    color: #000;
+    margin: 40px 0;
+    gap: 30px;
+}
+.subtitulo-lineas::before,
+.subtitulo-lineas::after {
+    content: "";
+    flex: 1;
+    height: 0.5px;
+    background-color: #000;
+}
+.p-lineas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    margin: 40px 100px;
+    gap: 30px;
+    margin-bottom: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+.p-lineas::before,
+.p-lineas::after {
+    content: "";
+    flex: 1;
+    height: 0.5px;
+    background-color: #323232;
+}
+.p2-lineas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    gap: 30px;
+    margin-bottom: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+.p2-lineas::before,
+.p2-lineas::after {
+    content: "";
+    flex: 1;
+    height: 0.5px;
+    background-color: #000;
+}
+
+.titulo-clients-lineas-b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #323232;
+  margin: 40px 40px;
+  gap: 30px;
+  font-weight: 400; 
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+}
+.titulo-clients-lineas-b::before,
+.titulo-clients-lineas-b::after {
+  content: "";
+  flex: 1;
+  height: 0.5px;
+  background-color: #323232;
+}
+
+.titulo-nros-lineas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin: 40px 40px;
+  gap: 30px;
+  font-weight: 400; 
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+}
+.titulo-nros-lineas::before,
+.titulo-nros-lineas::after {
+  content: "";
+  flex: 1;
+  height: 0.5px;
+  background-color: #ffffff;
+}
+
+/* 6.10 Texto de sección Historia */
+.section-history-text {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+/* 6.11 Formulario de Contacto */
+.contact-form-section {
+    position: relative;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 30%;
+    max-width: 400px;
+    padding: 30px;
+    background: linear-gradient(-45deg, #fff, #cc3333, #006633, #fff);
+    background-size: 400% 400%;
+    animation: liquidoFluyendo 10s ease infinite;
+}
+.contact-form-section h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #f55;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+@keyframes liquidoFluyendo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.submit-btn {
+    background-color: #fff;
+    color: #cc3333;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 2px solid #cc3333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+.submit-btn:hover {
+    color: #fff;
+    background-color: #cc3333;
+    border-bottom-color: #fff;
+    padding: 0 20px;
+}
+
+/* 6.12 Información de Contacto */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+/* 6.13 Whatsapp fixed */
+
+.fixed-whatsapp {
+    position: fixed;   /* cambia sticky por fixed */
+    bottom: 10px;
+    right: 10px;
+    width: 150px;
+    z-index: 1000;     /* asegúrate de que quede por delante */
+}
+
+.fixed-whatsapp img {
+    display: block;
+    width: 100%;       /* suficiente, no hace falta sticky aquí */
+}
+
+
+/* =======================================================
+   7. Utilidades / Helpers
+======================================================= */
+
+/* 7.1 Alineación e indentación */
+/* Usa esta clase para textos que deban ir siempre a la izquierda con un pequeño padding */
+.alinear-izq {
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* 7.2 Filtros – helper para listas de opciones */
+/* Encapsula el estilo base de cualquier bloque de “filtros” */
+.filtros {
+    width: 200px;
+    font-size: 14px;
+}
+.filtros h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.filtros ul {
+    list-style: none;
+    margin-bottom: 30px;
+    padding-left: 0;
+}
+.filtros li {
+    margin: 6px 0;
+}
+
+  /* ————————————————————————————————
+     8. Responsive
+  ———————————————————————————————— */
+  /* =======================================================
+   A. Layout Wrappers – Estructura principal del header
+======================================================= */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar-principal {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+/* =======================================================
+   B. Menú Hamburguesa – Estilos Base
+======================================================= */
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.menu-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 30px;
+    height: 24px;
+    margin-left: auto;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle-label span {
+    display: block;
+    height: 3px;
+    background-color: var(--color-black);
+    border-radius: 2px;
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+
+/* =======================================================
+   C. Menú Hamburguesa – Mobile (≤768px)
+======================================================= */
+@media (max-width: 768px) {
+  /* 1) Oculta la búsqueda */
+  .search-box {
+    display: none;
+  }
+
+  /* 2) Prepara el wrapper para apilar verticalmente */
+  .logo-nav-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  /* 3) Muestra siempre el icono hamburguesa */
+  .menu-toggle-label {
+    display: flex !important;
+    align-self: flex-end;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  /* 4) Panel oculto hasta activar checkbox */
+  .menu-content {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8px;
+    background: var(--color-white);
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  /* 5) Al marcar, muestra el panel completo */
+  .menu-toggle-checkbox:checked + .menu-toggle-label + .menu-content {
+    display: flex !important;
+  }
+
+  /* 6) Dentro del panel: fuerza que la nav se muestre en columna */
+  .menu-toggle-checkbox:checked + .menu-toggle-label + .menu-content .navbar-principal {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+
+/* =======================================================
+   D. Menú Hamburguesa – Desktop (≥769px)
+======================================================= */
+@media (min-width: 769px) {
+    .menu-toggle-label {
+        display: none;
+    }
+    .menu-content {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: auto;
+        background: transparent;
+        padding: 0;
+    }
+}
+
+/* =======================================================
+   E. Responsive – Ajustes globales por breakpoints
+======================================================= */
+/* ≤1200px: reducción de padding lateral */
+@media (max-width: 1200px) {
+    header,
+    #Números,
+    #Clientes-importantes,
+    #Productos,
+    #COPYRIGHT {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+/* ≤992px: ajustes de padding y búsqueda */
+@media (max-width: 992px) {
+    header,
+    #Números,
+    #Clientes-importantes,
+    #Productos,
+    #COPYRIGHT {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .search-box input[type="text"] {
+        width: 120px;
+    }
+    .logo-text strong {
+        font-size: 16px;
+    }
+}
+
+/* ≤480px: tipografía y tamaños de componentes */
+@media (max-width: 480px) {
+    .logo-text small {
+        font-size: 10px;
+    }
+    .boton-productos,
+    .boton-productos-light,
+    .boton-HEADER {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .texto-con-sombra {
+        font-size: 14px;
+    }
+}
+
+/* =======================================================
+   F. Utilidades – Correcciones de overflow
+======================================================= */
+.carousel-inner,
+.carousel-item {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* =======================================================
+   G. Responsive: scroll horizontal en overflow
+======================================================= */
+@media (max-width: 768px) {
+  .horizontal-scroll {
+    overflow-x: auto;                  /* activa scroll lateral */
+    -webkit-overflow-scrolling: touch; /* suaviza en iOS */
+    display: block;                    /* mantiene el flujo */
+  }
+  .horizontal-scroll table,
+  .horizontal-scroll .carousel-inner,
+  .horizontal-scroll iframe {
+    /* obliga al contenido a medir su ancho real */
+    width: max-content;
+    min-width: 100%;
+  }
+  /* Opcional: estético para la barra */
+  .horizontal-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+  .horizontal-scroll::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+  }
+}
+
+/* =======================================================
+   G. Responsive: Quines somos
+======================================================= */
+
+@media (max-width: 992px) {
+  .section-history-text {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-history-text {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form-section {
+    width: 100% !important;
+    max-width: 400px;
+    margin: 0 auto; /* centra en móvil */
+  }
+}

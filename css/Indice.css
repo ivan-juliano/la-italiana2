@@ -1,0 +1,78 @@
+/* =======================================================================
+   ╔════════════════════════════════════════════════════════════════════╗
+   ║                        ÍNDICE DE SECCIONES                         ║
+   ╠════════════════════════════════════════════════════════════════════╣
+   ║ 0. Temas – Fuentes & Paleta de Colores                             ║
+   ║    0.1 Definición de colores (variables CSS)                       ║
+   ║    0.2 Familias tipográficas                                       ║
+   ║    0.3 Otras familias (en línea)                                   ║
+   ║                                                                    ║
+   ║ 1. Reset / Estilos Globales                                        ║
+   ║    1.1 Box-sizing y márgenes/paddings por defecto                  ║
+   ║    1.2 Flujo y ancho del viewport, fondo base                      ║
+   ║    1.3 Desplazamiento inicial para el header fijo                  ║
+   ║    1.4 Imágenes responsivas                                        ║
+   ║                                                                    ║
+   ║ 2. Selectores de Elementos Nativos                                 ║
+   ║    2.1 Estructura: header y navegación                             ║
+   ║    2.2 Jerarquía tipográfica                                       ║
+   ║    2.3 Formularios                                                 ║
+   ║    2.4 Tablas                                                      ║
+   ║                                                                    ║
+   ║ 3. IDs (Secciones principales)                                     ║
+   ║    3.1 Estadísticas / Números                                      ║
+   ║    3.2 “Nuestra Historia”                                          ║
+   ║    3.3 “MMMM” (destacados)                                         ║
+   ║    3.4 Clientes Importantes                                        ║
+   ║    3.5 Productos                                                   ║
+   ║    3.6 Pie de página / Copyright                                   ║
+   ║                                                                    ║
+   ║ 4. Layout / Grid / Wrappers                                        ║
+   ║    4.1 Header Structure                                            ║
+   ║    4.2 Carousel                                                    ║
+   ║    4.3 “MMMM” Cards Grid                                           ║
+   ║    4.4 Products Section                                            ║
+   ║    4.5 layout-productos Page Layout                                ║
+   ║    4.6 Contact & Map Wrappers                                      ║
+   ║                                                                    ║
+   ║ 5. Navegación y Menús                                              ║
+   ║    5.1 Barra de navegación principal                               ║
+   ║    5.2 Botones de navegación                                       ║
+   ║    5.3 Dropdowns (submenús)                                        ║
+   ║    5.4 Hover – Efecto líquido en botones del header                ║
+   ║    5.5 Menú Hamburguesa                                            ║
+   ║       5.5.1 Base: ocultar checkbox/label en desktop                ║
+   ║       5.5.2 Contenedor “responsive”                                ║
+   ║       5.5.3 Mobile (≤768px): mostrar hamburguesa y ocultar nav     ║
+   ║       5.5.4 Desktop (≥769px): restaurar nav, ocultar hamburguesa   ║
+   ║                                                                    ║
+   ║ 6. Componentes / Bloques Funcionales                               ║
+   ║    6.1 Logo                                                        ║
+   ║    6.2 Buscador                                                    ║
+   ║    6.3 Zoom de imágenes                                            ║
+   ║    6.4 Carrusel – Contenido Overlay                                ║
+   ║    6.5 Botones de Productos                                        ║
+   ║    6.6 Texto con sombra                                            ║
+   ║    6.7 Tarjetas “MMMM”                                             ║
+   ║    6.8 “Quienes Somos” – Hero                                      ║
+   ║    6.9 Tipografía “Líneas”                                         ║
+   ║    6.10 Texto de sección Historia                                  ║
+   ║    6.11 Formulario de Contacto                                     ║
+   ║    6.12 Información de Contacto                                    ║
+   ║                                                                    ║
+   ║ 7. Utilidades / Helpers                                            ║
+   ║    7.1 Alineación e indentación                                    ║
+   ║    7.2 Filtros – helpers para listas                               ║
+   ║                                                                    ║
+   ║ 8. Responsive                                                      ║
+   ║    8.1 Header Layout Wrappers                                      ║
+   ║    8.2 Menú Hamburguesa – Estilos Base                             ║
+   ║    8.3 Mobile (≤768px)                                             ║
+   ║    8.4 Desktop (≥769px)                                            ║
+   ║    8.5 Breakpoints                                                 ║
+   ║       • ≤1200px: padding lateral                                   ║
+   ║       • ≤992px: padding & búsqueda                                 ║
+   ║       • ≤480px: tipografía & tamaños                               ║
+   ║    8.6 Correcciones de overflow                                    ║
+   ╚════════════════════════════════════════════════════════════════════╝
+   ======================================================================= */
